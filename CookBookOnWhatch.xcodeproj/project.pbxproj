@@ -11,11 +11,15 @@
 		7A2FE100257A0BAC00E86FAB /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A2FE0FE257A0BAC00E86FAB /* Interface.storyboard */; };
 		7A2FE102257A0BAF00E86FAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A2FE101257A0BAF00E86FAB /* Assets.xcassets */; };
 		7A2FE109257A0BB000E86FAB /* CookBookOnWhatch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7A2FE108257A0BB000E86FAB /* CookBookOnWhatch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		7A2FE10E257A0BB000E86FAB /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2FE10D257A0BB000E86FAB /* InterfaceController.swift */; };
+		7A2FE10E257A0BB000E86FAB /* TableRecipesIC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2FE10D257A0BB000E86FAB /* TableRecipesIC.swift */; };
 		7A2FE110257A0BB000E86FAB /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2FE10F257A0BB000E86FAB /* ExtensionDelegate.swift */; };
 		7A2FE112257A0BB000E86FAB /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2FE111257A0BB000E86FAB /* NotificationController.swift */; };
 		7A2FE114257A0BB000E86FAB /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2FE113257A0BB000E86FAB /* ComplicationController.swift */; };
 		7A2FE116257A0BB500E86FAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A2FE115257A0BB500E86FAB /* Assets.xcassets */; };
+		7A2FE12D257A111E00E86FAB /* RowTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2FE12C257A111E00E86FAB /* RowTable.swift */; };
+		7A2FE132257A11F000E86FAB /* Recipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2FE131257A11F000E86FAB /* Recipes.swift */; };
+		7A2FE137257A205E00E86FAB /* DetailRecipeIC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2FE136257A205E00E86FAB /* DetailRecipeIC.swift */; };
+		7A2FE13C257A237500E86FAB /* DescriptionRecipeIC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2FE13B257A237500E86FAB /* DescriptionRecipeIC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,13 +71,17 @@
 		7A2FE101257A0BAF00E86FAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A2FE103257A0BAF00E86FAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A2FE108257A0BB000E86FAB /* CookBookOnWhatch WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "CookBookOnWhatch WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7A2FE10D257A0BB000E86FAB /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		7A2FE10D257A0BB000E86FAB /* TableRecipesIC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableRecipesIC.swift; sourceTree = "<group>"; };
 		7A2FE10F257A0BB000E86FAB /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		7A2FE111257A0BB000E86FAB /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		7A2FE113257A0BB000E86FAB /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		7A2FE115257A0BB500E86FAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A2FE117257A0BB500E86FAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A2FE118257A0BB500E86FAB /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		7A2FE12C257A111E00E86FAB /* RowTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowTable.swift; sourceTree = "<group>"; };
+		7A2FE131257A11F000E86FAB /* Recipes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipes.swift; sourceTree = "<group>"; };
+		7A2FE136257A205E00E86FAB /* DetailRecipeIC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRecipeIC.swift; sourceTree = "<group>"; };
+		7A2FE13B257A237500E86FAB /* DescriptionRecipeIC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionRecipeIC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +98,7 @@
 		7A2FE0EE257A0BAB00E86FAB = {
 			isa = PBXGroup;
 			children = (
+				7A2FE131257A11F000E86FAB /* Recipes.swift */,
 				7A2FE0FD257A0BAC00E86FAB /* CookBookOnWhatch WatchKit App */,
 				7A2FE10C257A0BB000E86FAB /* CookBookOnWhatch WatchKit Extension */,
 				7A2FE0F6257A0BAB00E86FAB /* Products */,
@@ -119,15 +128,26 @@
 		7A2FE10C257A0BB000E86FAB /* CookBookOnWhatch WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				7A2FE10D257A0BB000E86FAB /* InterfaceController.swift */,
+				7AD6C8D1257A673D003D5341 /* Supported files */,
+				7A2FE10D257A0BB000E86FAB /* TableRecipesIC.swift */,
+				7A2FE12C257A111E00E86FAB /* RowTable.swift */,
+				7A2FE13B257A237500E86FAB /* DescriptionRecipeIC.swift */,
+				7A2FE136257A205E00E86FAB /* DetailRecipeIC.swift */,
+				7A2FE115257A0BB500E86FAB /* Assets.xcassets */,
+				7A2FE117257A0BB500E86FAB /* Info.plist */,
+			);
+			path = "CookBookOnWhatch WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		7AD6C8D1257A673D003D5341 /* Supported files */ = {
+			isa = PBXGroup;
+			children = (
 				7A2FE10F257A0BB000E86FAB /* ExtensionDelegate.swift */,
 				7A2FE111257A0BB000E86FAB /* NotificationController.swift */,
 				7A2FE113257A0BB000E86FAB /* ComplicationController.swift */,
-				7A2FE115257A0BB500E86FAB /* Assets.xcassets */,
-				7A2FE117257A0BB500E86FAB /* Info.plist */,
 				7A2FE118257A0BB500E86FAB /* PushNotificationPayload.apns */,
 			);
-			path = "CookBookOnWhatch WatchKit Extension";
+			path = "Supported files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,10 +276,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A2FE137257A205E00E86FAB /* DetailRecipeIC.swift in Sources */,
 				7A2FE112257A0BB000E86FAB /* NotificationController.swift in Sources */,
+				7A2FE132257A11F000E86FAB /* Recipes.swift in Sources */,
 				7A2FE114257A0BB000E86FAB /* ComplicationController.swift in Sources */,
+				7A2FE13C257A237500E86FAB /* DescriptionRecipeIC.swift in Sources */,
 				7A2FE110257A0BB000E86FAB /* ExtensionDelegate.swift in Sources */,
-				7A2FE10E257A0BB000E86FAB /* InterfaceController.swift in Sources */,
+				7A2FE10E257A0BB000E86FAB /* TableRecipesIC.swift in Sources */,
+				7A2FE12D257A111E00E86FAB /* RowTable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

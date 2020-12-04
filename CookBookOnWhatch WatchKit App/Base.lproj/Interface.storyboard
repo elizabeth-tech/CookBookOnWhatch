@@ -1,47 +1,145 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14256" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="17506" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch44"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14243"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14219"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="17500"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc">
+                    <items>
+                        <imageView alignment="center" verticalAlignment="center" image="logo" id="azS-ra-kc9"/>
+                        <label alignment="center" verticalAlignment="center" text="CookBook" id="YuP-hh-9Zk">
+                            <fontDescription key="font" style="UICTFontTextStyleTitle2"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <segue destination="uEd-Mh-3rV" kind="relationship" relationship="nextPage" id="cdk-Le-vz9"/>
+                    </connections>
+                </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>
         </scene>
-        <!--Static Notification Interface Controller-->
-        <scene sceneID="AEw-b0-oYE">
+        <!--Table RecipesIC-->
+        <scene sceneID="hwg-H0-Bz1">
             <objects>
-                <notificationController id="YCC-NB-fut">
+                <controller id="uEd-Mh-3rV" customClass="TableRecipesIC" customModule="CookBookOnWhatch_WatchKit_Extension">
                     <items>
-                        <label alignment="left" text="Alert Label" numberOfLines="0" id="IdU-wH-bcW"/>
+                        <table alignment="left" id="pm6-Bc-JBQ">
+                            <items>
+                                <tableRow identifier="rowTable" id="I8H-iD-M0K" customClass="RowTable" customModule="CookBookOnWhatch_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="Wzv-0i-A8k">
+                                        <items>
+                                            <imageView width="30" height="30" alignment="left" verticalAlignment="center" image="swift" catalog="system" id="v4W-hb-Dvz">
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </imageView>
+                                            <label alignment="left" verticalAlignment="center" text="RecName" id="Nyd-fB-j9V"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="rowPicture" destination="v4W-hb-Dvz" id="Jgx-PQ-dvY"/>
+                                        <outlet property="rowRecipeName" destination="Nyd-fB-j9V" id="ot5-F0-t3a"/>
+                                        <segue destination="qXI-jB-4We" kind="push" id="WuE-nP-Mf7"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
                     </items>
-                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
                     <connections>
-                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
-                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
-                        <segue destination="eXb-UN-Cd0" kind="relationship" relationship="dynamicInteractiveNotificationInterface" id="mpB-YA-K8N"/>
+                        <outlet property="table" destination="pm6-Bc-JBQ" id="95X-8V-4oJ"/>
                     </connections>
-                </notificationController>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="643"/>
+            <point key="canvasLocation" x="442" y="345"/>
         </scene>
-        <!--Notification Controller-->
-        <scene sceneID="ZPc-GJ-vnh">
+        <!--Detail RecipeIC-->
+        <scene sceneID="EJH-rw-zJT">
             <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModuleProvider="target"/>
+                <controller id="qXI-jB-4We" customClass="DetailRecipeIC" customModule="CookBookOnWhatch_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" id="3pi-dq-3Je">
+                            <items>
+                                <imageView width="24" height="24" alignment="center" verticalAlignment="center" image="tray.circle.fill" catalog="system" id="bNA-aS-lEa">
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </imageView>
+                                <label alignment="center" verticalAlignment="center" text="Name" id="bi7-ij-oBd"/>
+                            </items>
+                        </group>
+                        <imageView alignment="center" image="im_cesar" id="2eS-MP-180"/>
+                        <group width="1" alignment="left" layout="vertical" id="sEa-aA-2fj">
+                            <items>
+                                <label alignment="left" text="Автор:" id="OJa-OB-cEF"/>
+                                <label alignment="left" text="authorName" id="bn1-sk-985"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" layout="vertical" id="xxm-C2-eHA">
+                            <items>
+                                <label alignment="left" text="Описание:" id="FWc-f3-1fb"/>
+                            </items>
+                        </group>
+                        <button alignment="left" id="uwb-Vh-SOv">
+                            <group key="contentGroup" width="1" height="34" alignment="left" id="C5Q-R3-VNG">
+                                <items>
+                                    <label alignment="left" text="recipeText" id="bRY-88-IbD"/>
+                                </items>
+                            </group>
+                            <connections>
+                                <segue destination="MAL-u1-AEA" kind="modal" id="z6O-uS-kTq"/>
+                            </connections>
+                        </button>
+                        <label alignment="left" text="Рейтинг" id="gHY-b2-CM6"/>
+                        <slider width="1" alignment="left" maximum="5" steps="5" minimumImage="star" catalog="system" maximumImage="star.fill" id="UPK-gb-ZbU">
+                            <color key="color" name="Yellow"/>
+                            <connections>
+                                <action selector="changeRating:" destination="qXI-jB-4We" id="pd6-VV-fO0"/>
+                            </connections>
+                        </slider>
+                    </items>
+                    <connections>
+                        <outlet property="authorRecipe" destination="bn1-sk-985" id="hNy-GV-xE0"/>
+                        <outlet property="iconRecipe" destination="bNA-aS-lEa" id="SbO-ZG-aF8"/>
+                        <outlet property="imageRecipe" destination="2eS-MP-180" id="hnx-2e-2FO"/>
+                        <outlet property="nameRecipe" destination="bi7-ij-oBd" id="u1R-Ww-2b0"/>
+                        <outlet property="ratingRecipe" destination="UPK-gb-ZbU" id="Qg4-Dt-f4r"/>
+                        <outlet property="textRecipe" destination="bRY-88-IbD" id="bQn-DC-fTf"/>
+                    </connections>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="468" y="643"/>
+            <point key="canvasLocation" x="689.60869565217388" y="350.24553571428572"/>
         </scene>
-        <!--Notification Controller-->
-        <scene sceneID="Niz-AI-uX2">
+        <!--Description RecipeIC-->
+        <scene sceneID="acJ-Gc-98P">
             <objects>
-                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModuleProvider="target"/>
+                <controller id="MAL-u1-AEA" customClass="DescriptionRecipeIC" customModule="CookBookOnWhatch_WatchKit_Extension">
+                    <items>
+                        <label width="1" alignment="center" text="recipeText" textAlignment="justified" numberOfLines="0" id="eTw-qS-pFN">
+                            <color key="textColor" name="White"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="fullRecipeLabel" destination="eTw-qS-pFN" id="Sdx-05-jEq"/>
+                    </connections>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="468" y="345"/>
+            <point key="canvasLocation" x="954" y="254"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="im_cesar" width="207.5" height="300"/>
+        <image name="logo" width="96" height="96"/>
+        <image name="star" catalog="system" width="128" height="115"/>
+        <image name="star.fill" catalog="system" width="128" height="115"/>
+        <image name="swift" catalog="system" width="128" height="103"/>
+        <image name="tray.circle.fill" catalog="system" width="128" height="121"/>
+        <namedColor name="White">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Yellow">
+            <color red="1" green="0.70196078431372544" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
